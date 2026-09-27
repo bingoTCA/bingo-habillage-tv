@@ -1,0 +1,225 @@
+/* =====================================================================
+   Site de BINGO Habillage TV.
+
+   Même langage visuel que le logiciel — bleu nuit, violet, jaune, Impact
+   pour les titres — pour que la page et l'application se lisent comme un
+   seul produit. Le corps de texte reste en sans-sérif ordinaire.
+   ===================================================================== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --nuit:        #07112b;
+  --bleu:        #0a1a40;
+  --bleu-clair:  #1b4a8f;
+  --violet:      #4b0082;
+  --jaune:       #ffd84a;
+  --rouge:       #c8102e;
+  --texte:       #eef1f7;
+  --texte-doux:  #aeb7cc;
+  --bord:        rgba(255,255,255,.14);
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  background: var(--nuit);
+  color: var(--texte);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dedans { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+h1, h2, h3, .marque, .tele-titre {
+  font-family: Impact, "Arial Narrow", Arial, sans-serif;
+  font-weight: 400; letter-spacing: .5px; line-height: 1.1;
+}
+h1 { font-size: clamp(38px, 6.5vw, 66px); }
+h2 { font-size: clamp(26px, 4vw, 38px); margin-bottom: 18px; }
+h3 { font-size: 22px; margin-bottom: 8px; color: var(--jaune); }
+
+a { color: var(--jaune); }
+strong { color: #fff; }
+em { color: var(--jaune); font-style: normal; }
+code {
+  font-family: Menlo, Consolas, monospace; font-size: 14px;
+  background: rgba(0,0,0,.4); border: 1px solid var(--bord);
+  padding: 2px 7px; border-radius: 6px; word-break: break-all;
+}
+
+.petit { font-size: 14px; color: var(--texte-doux); }
+.intro { max-width: 64ch; margin-bottom: 24px; }
+
+/* ---------- En-tête ---------- */
+.entete {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(7, 17, 43, .92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--bord);
+}
+.entete-dedans { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 62px; flex-wrap: wrap; }
+.marque { font-size: 24px; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.marque .boule {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff3a8 0, var(--jaune) 45%, #c99a00 100%);
+  display: grid; place-items: center; color: var(--rouge); font-size: 17px;
+}
+.entete nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.entete nav a { color: var(--texte-doux); text-decoration: none; font-size: 15px; }
+.entete nav a:hover { color: #fff; }
+.entete nav .lien-don { color: var(--jaune); }
+
+/* ---------- Accroche ---------- */
+.heros {
+  padding: 80px 0 70px;
+  background:
+    radial-gradient(circle at 80% 0%, rgba(75,0,130,.55) 0, transparent 55%),
+    radial-gradient(circle at 10% 100%, rgba(255,216,74,.08) 0, transparent 50%),
+    linear-gradient(160deg, var(--bleu) 0%, var(--bleu-clair) 100%);
+  border-bottom: 1px solid var(--bord);
+}
+.surtitre { color: var(--jaune); font-size: 15px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
+.heros h1 { margin-bottom: 20px; text-shadow: 0 4px 18px rgba(0,0,0,.45); }
+.accroche { font-size: 20px; max-width: 60ch; margin-bottom: 30px; }
+
+.pastille {
+  display: inline-block; margin-bottom: 18px;
+  font-size: 13px; padding: 5px 12px; border-radius: 20px;
+  background: rgba(255,216,74,.16); color: var(--jaune); border: 1px solid rgba(255,216,74,.35);
+}
+
+.boutons { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.bouton {
+  display: inline-block; text-decoration: none;
+  padding: 13px 26px; border-radius: 10px;
+  border: 1px solid var(--bord); color: var(--texte);
+  font-size: 16px; font-family: inherit; line-height: normal;
+  background: transparent; cursor: pointer;
+}
+.bouton:hover { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.3); }
+.bouton-fort { background: var(--jaune); border-color: var(--jaune); color: #1d0f3a; font-weight: 700; }
+.bouton-fort:hover { background: #ffe57d; border-color: #ffe57d; }
+
+.capture-heros {
+  margin-top: 46px;
+  border-radius: 14px; overflow: hidden;
+  border: 1px solid var(--bord);
+  box-shadow: 0 30px 80px rgba(0,0,0,.55);
+}
+.capture-heros img { display: block; width: 100%; height: auto; }
+
+/* ---------- Pictogrammes (trait, couleur du texte) ---------- */
+svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- Atouts ---------- */
+.bande-atouts { padding: 56px 0; background: #050d22; border-bottom: 1px solid var(--bord); }
+.atouts {
+  list-style: none;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 32px 28px;
+}
+.atouts li { display: flex; flex-direction: column; gap: 7px; }
+.atouts svg { width: 32px; height: 32px; color: var(--jaune); margin-bottom: 4px; }
+.atouts strong {
+  font-family: Impact, "Arial Narrow", Arial, sans-serif;
+  font-weight: 400; font-size: 20px; letter-spacing: .4px; color: #fff;
+}
+.atouts span { font-size: 15px; color: var(--texte-doux); line-height: 1.55; }
+
+/* ---------- Bandes ---------- */
+.bande { padding: 72px 0; border-bottom: 1px solid var(--bord); }
+.bande-sombre { background: #050d22; }
+.bande-don {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255,216,74,.10) 0, transparent 60%),
+    linear-gradient(180deg, #1a0f3a 0%, var(--nuit) 100%);
+}
+
+.carte {
+  background: linear-gradient(180deg, rgba(75,0,130,.40) 0%, rgba(10,26,64,.45) 100%);
+  border: 1px solid var(--bord); border-radius: 14px;
+  padding: 26px 26px 28px;
+}
+.carte p + p { margin-top: 12px; }
+.grille-deux { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+/* ---------- Captures ---------- */
+.apercu { margin-bottom: 44px; }
+.apercu:last-child { margin-bottom: 0; }
+.apercu img {
+  display: block; width: 100%; height: auto;
+  border-radius: 12px; border: 1px solid var(--bord);
+  background: var(--bleu);
+}
+.apercu figcaption { margin-top: 14px; max-width: 76ch; color: var(--texte-doux); font-size: 16px; }
+.apercu figcaption strong { color: var(--jaune); }
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+@media (max-width: 760px) { .duo { grid-template-columns: 1fr; } }
+
+/* ---------- Base de cartes ---------- */
+.chiffres { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin: 26px 0; }
+.chiffre {
+  border: 1px solid var(--bord); border-radius: 14px; padding: 20px 22px;
+  background: rgba(255,255,255,.03);
+}
+.chiffre b {
+  display: block; font-family: Impact, "Arial Narrow", Arial, sans-serif; font-weight: 400;
+  font-size: 34px; color: var(--jaune); line-height: 1.1;
+}
+.chiffre span { font-size: 15px; color: var(--texte-doux); }
+.jauge { height: 12px; border-radius: 8px; background: rgba(255,255,255,.1); overflow: hidden; margin-top: 12px; }
+.jauge i { display: block; height: 100%; background: linear-gradient(90deg, var(--jaune), #ffb300); }
+
+/* ---------- Téléchargement ---------- */
+.telechargement {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 26px; border-radius: 14px; text-decoration: none;
+  background: linear-gradient(180deg, rgba(75,0,130,.45) 0%, rgba(10,26,64,.45) 100%);
+  border: 1px solid rgba(255,216,74,.35); color: var(--texte);
+  transition: border-color .15s, transform .15s;
+}
+.telechargement:hover { border-color: var(--jaune); transform: translateY(-2px); }
+.tele-titre { font-size: 28px; color: #fff; }
+.tele-detail { font-size: 15px; color: var(--texte-doux); }
+.tele-etat {
+  align-self: flex-start; margin-top: 12px;
+  font-size: 14px; padding: 7px 14px; border-radius: 20px;
+  background: var(--jaune); color: #1d0f3a; font-weight: 700;
+}
+.telechargement.inactif { border-color: var(--bord); cursor: default; opacity: .75; }
+.telechargement.inactif:hover { transform: none; }
+.telechargement.inactif .tele-etat { background: rgba(255,255,255,.12); color: var(--texte-doux); font-weight: 400; }
+
+/* ---------- Listes et étapes ---------- */
+.liste-simple { list-style: none; max-width: 76ch; display: grid; gap: 10px; }
+.liste-simple li { padding-left: 20px; position: relative; }
+.liste-simple li::before { content: "—"; position: absolute; left: 0; color: var(--jaune); }
+
+.etapes { list-style: none; counter-reset: etape; display: grid; gap: 24px; max-width: 80ch; }
+.etapes li { counter-increment: etape; padding-left: 62px; position: relative; }
+.etapes li::before {
+  content: counter(etape);
+  position: absolute; left: 0; top: 0;
+  width: 42px; height: 42px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--jaune); color: #1d0f3a;
+  font-family: Impact, "Arial Narrow", Arial, sans-serif; font-size: 22px;
+}
+.etapes h3 { margin-bottom: 4px; }
+.etapes p + p { margin-top: 8px; }
+
+.avis {
+  border-left: 4px solid var(--jaune);
+  background: rgba(255,216,74,.06);
+  border-radius: 0 14px 14px 0;
+  padding: 26px 28px;
+}
+.avis p + p { margin-top: 12px; }
+
+/* ---------- Pied de page ---------- */
+.pied { padding: 44px 0 56px; background: #040a1c; }
+.pied p + p { margin-top: 8px; }
