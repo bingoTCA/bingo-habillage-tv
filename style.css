@@ -277,3 +277,10 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round
 .bouton-geant { font-size: 22px; padding: 18px 34px; margin-top: 16px; border-radius: 12px; }
 .tableau-exemple td:nth-child(3), .tableau-exemple td:nth-child(4), .tableau-exemple td:nth-child(8) { white-space: normal; min-width: 150px; }
 .tableau-exemple td:nth-child(4) { min-width: 210px; }
+
+/* ---------- Cartes compatibles (Arrow Games) ---------- */
+.pastille-arrow { margin-left: 8px; background: rgba(255,255,255,.1); color: #fff; border-color: rgba(255,255,255,.3); }
+.tableau-series td { white-space: normal; vertical-align: top; }
+.tableau-series td:first-child { white-space: nowrap; color: #fff; }
+.carte.achat { margin-top: 10px; border-color: rgba(255,216,74,.4); }
+.carte.achat a[href^="tel:"] { color: var(--jaune); font-weight: 700; text-decoration: none; }

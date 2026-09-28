@@ -11,7 +11,7 @@
 <meta property="og:title" content="BINGO Habillage TV">
 <meta property="og:description" content="Logiciel gratuit : l'habillage à l'écran de ton bingo télévisé, avec vérification des cartes en direct.">
 <meta property="og:locale" content="fr_CA">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
@@ -44,6 +44,7 @@
         et une carte gagnante se <strong>vérifie en quelques secondes, en direct</strong>.
       </p>
       <span class="pastille">Version d'essai 2.27 · Mac et PC (Windows)</span>
+      <span class="pastille pastille-arrow">Compatible avec les cartes de bingo papier Arrow Games</span>
       <div class="boutons">
         <a class="bouton bouton-fort" href="#telecharger">Télécharger gratuitement</a>
         <a class="bouton" href="#contribution">Soutenir le projet</a>
@@ -52,8 +53,8 @@
       <a class="appel-studio" href="https://bingotca.github.io/bingo-studio/" target="_blank" rel="noopener">
         <span class="appel-studio-texte">
           <b>Tu veux un logiciel plus professionnel et plus puissant&nbsp;?</b>
-          <span>Bingo Studio communautaire, gratuit lui aussi : ta propre base de 50&nbsp;000 cartes,
-            l'impression de tes cartes, deux écrans (antenne + régie), les gagnants et le partage des lots.</span>
+          <span>Bingo Studio communautaire, gratuit lui aussi et avec la même base de cartes : deux écrans
+            (antenne + régie), les gagnants et le partage des lots, l'entracte et tes commanditaires.</span>
         </span>
         <span class="appel-studio-bouton">Clique ici&nbsp;→</span>
       </a>
@@ -151,7 +152,7 @@
   <!-- ============================ Base de cartes ============================ -->
   <section id="cartes" class="bande bande-sombre">
     <div class="dedans">
-      <h2>La base de cartes</h2>
+      <h2>La base de cartes · compatible Arrow Games</h2>
       <p class="intro">
         Pour vérifier une carte, le logiciel doit connaître ses 24 numéros. La base de cartes
         papier est directement dans l'application : aucune connexion, aucune saisie de ta part.
@@ -168,9 +169,60 @@
         </div>
         <div class="chiffre"><b>En cours</b><span>34 201 → 36 000 et 45 001 → 54 000 sont en numérisation et arriveront avec les prochaines mises à jour</span></div>
       </div>
-      <p class="petit">
-        La base correspond aux cartes papier Arrow. Ta télé utilise d'autres cartes ?
-        <a href="#contribution">Envoie-nous le PDF de tes cartes</a> : on les ajoutera au logiciel, pour toutes les télés.
+      <h3 class="sous-titre-audit">Les cartes compatibles</h3>
+      <p class="intro">
+        BINGO Habillage TV vérifie les cartes de bingo papier <strong>Arrow Games</strong>, vendues au Québec
+        par <strong>Bingo Vézina</strong>. Chaque carte porte son numéro de série : c'est lui que tu tapes dans le logiciel.
+      </p>
+      <div class="tableau-defile" style="margin-bottom:26px">
+        <table class="tableau-exemple tableau-series">
+          <thead><tr><th>Numéros de série</th><th>Cartes</th><th>Dans le logiciel</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1&nbsp;→&nbsp;9&nbsp;000</strong></td>
+                <td>Arrow, gamme <strong>Capitol™</strong> · papier orange « Orange BDR » · feuilles de 6 cartes ·
+                    1 500 feuilles par boîte · étiquette « <strong>6V2 · 1-9000 · CAPITOL</strong> » · n° de pièce 1212653</td>
+                <td class="ok">Intégrée</td></tr>
+            <tr><td><strong>27&nbsp;001&nbsp;→&nbsp;36&nbsp;000</strong></td>
+                <td>Arrow, série « 27,001 – 36,000 »</td>
+                <td class="ok">27 001 → 34 200 intégrées<br><span style="color:var(--texte-doux);font-weight:400">la suite en cours</span></td></tr>
+            <tr><td><strong>45&nbsp;001&nbsp;→&nbsp;54&nbsp;000</strong></td>
+                <td>Série à numériser</td>
+                <td>À venir</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="duo">
+        <figure class="apercu">
+          <img src="images/boite-capitol-1-9000.jpg" width="1600" height="900" loading="lazy"
+               alt="Une boîte de cartes de bingo : étiquette 6V2, 1-9000, CAPITOL, ORANGE BDR, 1500 feuilles, à commander chez Bingo Vézina, 514 329-2332.">
+          <figcaption>La boîte à demander : <strong>6V2 · 1-9000 · CAPITOL · ORANGE BDR</strong>, 1 500 feuilles.
+            L'étiquette indique de recommander chez Bingo Vézina.</figcaption>
+        </figure>
+        <figure class="apercu">
+          <img src="images/feuille-capitol-1-9000.jpg" width="1400" height="787" loading="lazy"
+               alt="Une feuille de 6 cartes de bingo orange, cartes 1509, 1634, 1759, 1884, 2009 et 2134.">
+          <figcaption>Une vraie feuille de cette boîte (cartes 1509 à 2134) : <strong>les 6 cartes sont identiques,
+            case par case, à la base du logiciel</strong>.</figcaption>
+        </figure>
+      </div>
+
+      <div class="carte achat">
+        <h3>Où acheter ces cartes au Québec</h3>
+        <p><strong>Bingo Vézina</strong> — distributeur d'Arrow Games au Québec<br>
+           8440, boulevard du Golf, Anjou (Montréal) QC H1J 3A1<br>
+           Téléphone : <a href="tel:+15143292332">514 329-2332</a> · sans frais : <a href="tel:+18003618197">1 800 361-8197</a></p>
+        <p class="petit">Au téléphone, précise la boîte (par exemple « 6V2, 1-9000, Capitol, Orange BDR ») ou la série voulue.
+           Adresse et numéros tirés de la page de contact officielle d'Arrow Games.</p>
+        <div class="boutons" style="margin:14px 0 0">
+          <a class="bouton bouton-fort" href="https://info.arrowgames.com/contact" target="_blank" rel="noopener">Coordonnées de Bingo Vézina (Arrow Games)</a>
+          <a class="bouton" href="https://paper.arrowgames.com/" target="_blank" rel="noopener">Le catalogue de cartes Arrow</a>
+        </div>
+      </div>
+
+      <p class="petit" style="margin-top:22px">
+        Ta télé utilise d'autres cartes ? <a href="#contribution">Envoie-nous le PDF de tes cartes</a> :
+        on les ajoutera au logiciel, pour toutes les télés.
       </p>
     </div>
   </section>
@@ -392,7 +444,8 @@
       <p class="intro">
         <strong>Bingo Studio communautaire</strong> est la régie de bingo <em>professionnelle</em> des
         télévisions communautaires autonomes. Là où BINGO Habillage TV habille ton écran, Bingo Studio
-        prend en charge <strong>toute ton émission</strong> — de l'impression des cartes jusqu'au générique de fin.
+        prend en charge <strong>toute ton émission</strong>, du premier numéro jusqu'au générique de fin.
+        Il utilise <strong>la même base de cartes</strong> : seul le logiciel change, plus complet et plus puissant.
       </p>
 
       <div class="duo">
@@ -411,8 +464,8 @@
       </div>
 
       <ul class="atouts atouts-studio">
-        <li><strong>50 000 cartes à toi</strong><span>Une base libre de droits pour les télévisions communautaires autonomes : elle n'appartient à aucun fournisseur.</span></li>
-        <li><strong>Tes cartes imprimables</strong><span>De 1 à 18 grilles par feuille, tes couleurs, ton numéro de contrôle : le PDF sort prêt pour ton fournisseur.</span></li>
+        <li><strong>La même base de cartes</strong><span>Les mêmes cartes papier Arrow Games : tes cartes fonctionnent dans les deux logiciels.</span></li>
+        <li><strong>La carte à l'antenne</strong><span>Le numéro entré, la carte s'affiche en ondes avec les numéros sortis : tout le monde voit le verdict en même temps.</span></li>
         <li><strong>Deux écrans</strong><span>L'antenne pour tes téléspectateurs, la régie pour toi. Fonctionne aussi avec OBS et Tricaster.</span></li>
         <li><strong>Gagnants et lots</strong><span>Les noms restent à l'écran, et le lot se divise tout seul quand deux personnes gagnent la même figure.</span></li>
         <li><strong>Entracte et commanditaires</strong><span>Un compte à rebours, et les images et vidéos de tes commanditaires passent à l'écran.</span></li>
@@ -433,8 +486,8 @@
         </div>
         <div class="carte">
           <h3>Bingo Studio communautaire</h3>
-          <p>Tu veux <strong>la régie complète</strong> : ta propre base de cartes et tes impressions,
-             deux écrans, les gagnants, l'entracte et tes commanditaires.</p>
+          <p>Tu veux <strong>la régie complète</strong> : deux écrans, les gagnants et le partage des lots,
+             l'entracte et tes commanditaires — avec la même base de cartes.</p>
         </div>
       </div>
     </div>
@@ -491,7 +544,7 @@
     </p>
     <p class="petit">
       Du même auteur : <a href="https://bingotca.github.io/bingo-studio/" target="_blank" rel="noopener">Bingo Studio communautaire</a>,
-      la régie de bingo complète (préparation des cartes, écran d'antenne, vérification).
+      la régie de bingo complète (écran d'antenne, écran de régie, vérification), avec la même base de cartes.
     </p>
   </div>
 </footer>
