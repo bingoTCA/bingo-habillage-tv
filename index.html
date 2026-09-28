@@ -264,8 +264,8 @@
     <div class="dedans">
       <h2>Installer</h2>
       <p class="intro">
-        Le logiciel n'est pas vendu dans une boutique d'applications : au premier lancement, ton ordinateur
-        demande une confirmation. C'est normal, et ça ne se fait qu'une fois.
+        Le logiciel est gratuit et ne passe pas par une boutique d'applications : au premier lancement, ton
+        ordinateur demande une confirmation. C'est normal, et ça ne se fait qu'une fois.
       </p>
       <h3 style="margin-bottom:18px">Sur Mac</h3>
       <ol class="etapes">
@@ -274,15 +274,18 @@
           <p>Glisse <strong>BINGO Habillage TV</strong> dans le dossier <strong>Applications</strong>.</p>
         </li>
         <li>
-          <h3>Premier lancement</h3>
-          <p>Dans Applications, fais un <strong>clic droit</strong> sur l'app → <strong>Ouvrir</strong> → <strong>Ouvrir</strong>.</p>
-          <p>Si macOS refuse encore : <strong>Réglages Système → Confidentialité et sécurité</strong>,
-             tout en bas, bouton <strong>« Ouvrir quand même »</strong>.</p>
+          <h3>Premier lancement : « Ouvrir quand même »</h3>
+          <p>Double-clique sur l'app. macOS affiche qu'il n'a pas pu vérifier l'app : clique sur <strong>Terminé</strong>.</p>
+          <p>Ouvre ensuite <strong>Réglages Système → Confidentialité et sécurité</strong>, descends jusqu'à la section
+             <strong>Sécurité</strong> et clique sur <strong>« Ouvrir quand même »</strong> à côté de BINGO Habillage TV.
+             Confirme avec ton mot de passe (ou Touch ID), puis <strong>Ouvrir</strong>. C'est fait pour de bon.</p>
+          <p class="petit">Sur macOS 13 ou 14, un <strong>clic droit</strong> sur l'app → <strong>Ouvrir</strong> → <strong>Ouvrir</strong> suffit.</p>
         </li>
         <li>
           <h3>Message « l'app est endommagée » ?</h3>
-          <p>Elle ne l'est pas : c'est la façon dont macOS traite une app téléchargée qui ne vient pas de l'App Store.
-             Ouvre le <strong>Terminal</strong> (Applications → Utilitaires), colle cette ligne, puis appuie sur Entrée :</p>
+          <p>Elle ne l'est pas : ça peut arriver avec une version téléchargée avant le 27 septembre 2026 au soir.
+             Télécharge la version actuelle, ou ouvre le <strong>Terminal</strong> (Applications → Utilitaires),
+             colle cette ligne, puis appuie sur Entrée :</p>
           <p><code>xattr -dr com.apple.quarantine "/Applications/BINGO Habillage TV.app"</code></p>
           <p>Relance l'app : c'est réglé pour de bon.</p>
         </li>
