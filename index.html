@@ -43,7 +43,7 @@
         À l'écran, par contre, <strong>ton bingo a l'air d'une vraie émission</strong> —
         et une carte gagnante se <strong>vérifie en quelques secondes, en direct</strong>.
       </p>
-      <span class="pastille">Version d'essai 2.27 · Mac et PC (Windows)</span>
+      <span class="pastille">Version d'essai 2.28 · Mac et PC (Windows)</span>
       <span class="pastille pastille-arrow">Compatible avec les cartes de bingo papier Arrow Games</span>
       <div class="boutons">
         <a class="bouton bouton-fort" href="#telecharger">Télécharger gratuitement</a>
@@ -60,7 +60,7 @@
       </a>
 
       <figure class="capture-heros">
-        <img src="images/jeu.jpg" width="1600" height="900"
+        <img src="images/jeu.jpg?v=228" width="1600" height="900"
              alt="L'écran d'antenne : le tableau de 1 à 75 avec les numéros sortis en rouge, le dernier numéro en grand,
                   les trois précédents, la forme en cours, les prix à gagner, les numéros de téléphone,
                   le bandeau d'annonces et la zone bleue où s'incruste l'animateur.">
@@ -98,6 +98,11 @@
           <span>Un clic sur le bloc téléphone : la zone de l'animateur laisse place à un message (« Nous revenons dans quelques instants ») et à de la musique, le temps de prendre l'appel.</span>
         </li>
         <li>
+          <svg viewBox="0 0 32 32"><path d="M10 4h12v7a6 6 0 0 1-12 0z"/><path d="M10 7H5a4 4 0 0 0 5 5M22 7h5a4 4 0 0 1-5 5M16 17v6M11 28h10M13 23h6v5h-6z"/></svg>
+          <strong>Les gagnants à l'écran</strong>
+          <span>Carte gagnante ? Une fenêtre « Félicitations » pour inscrire le nom du gagnant, puis les gagnants défilent à l'écran avec la forme gagnée.</span>
+        </li>
+        <li>
           <svg viewBox="0 0 32 32"><path d="M8 3h12l6 6v20H8z"/><path d="M20 3v6h6M12 15h10M12 20h10M12 25h6"/></svg>
           <strong>Journal d'audit</strong>
           <span>Chaque boule, chaque correction, chaque carte vérifiée et chaque gagnante est notée à la seconde près. Un rapport téléchargeable (tableur) pour chaque partie.</span>
@@ -125,13 +130,24 @@
         d'activer ou d'enlever un numéro par erreur. On referme la vérification, et le jeu continue.
       </p>
       <figure class="apercu">
-        <img src="images/verification.jpg" width="1600" height="900" loading="lazy"
+        <img src="images/verification.jpg?v=228" width="1600" height="900" loading="lazy"
              alt="Deux cartes vérifiées à l'écran à la place de la zone de l'animateur : la carte 27001,
                   gagnante pour le X, et la carte 31415, à qui il manque 7 numéros.">
         <figcaption>
           Deux appels, deux cartes. La <strong>27001</strong> a fait son X : « Gagnante ».
           À la <strong>31415</strong>, il manque 7 numéros. Les cases de la forme à faire sont
-          encadrées en or, les numéros déjà sortis sont en rouge.
+          encadrées en or, les numéros déjà sortis sont en rouge. Sous les cartes, le bandeau
+          <strong>GAGNANTS</strong> fait défiler les noms déjà inscrits.
+        </figcaption>
+      </figure>
+      <figure class="apercu">
+        <img src="images/gagnant.jpg?v=228" width="1600" height="900" loading="lazy"
+             alt="La fenêtre Félicitations : trophée, confettis, carte 27001, forme gagnée Le X,
+                  champs Nom du gagnant et Ville, boutons Enregistrer et Fermer.">
+        <figcaption>
+          Carte gagnante : une fenêtre <strong>« Félicitations »</strong> s'ouvre pour inscrire le
+          <strong>nom</strong> (et la ville) du gagnant. Entrée pour enregistrer, Échap pour fermer.
+          Tu préfères t'en passer ? Une case à décocher dans les paramètres.
         </figcaption>
       </figure>
       <div class="duo">
@@ -228,12 +244,12 @@
         <a class="telechargement" href="https://github.com/bingoTCA/bingo-habillage-tv/releases/latest/download/BINGO-Habillage-TV-mac.dmg">
           <span class="tele-titre">Mac</span>
           <span class="tele-detail">Mac avec puce Apple (M1, M2, M3, M4) · macOS 13 Ventura ou plus récent</span>
-          <span class="tele-etat">Télécharger la version 2.27 · 165 Mo</span>
+          <span class="tele-etat">Télécharger la version 2.28 · 165 Mo</span>
         </a>
         <a class="telechargement" href="https://github.com/bingoTCA/bingo-habillage-tv/releases/latest/download/BINGO-Habillage-TV-windows.exe">
           <span class="tele-titre">PC (Windows)</span>
           <span class="tele-detail">Windows 10 ou 11 (64 bits) · nouveau : dis-moi comment ça se passe sur ton PC</span>
-          <span class="tele-etat">Télécharger la version 2.27 · 148 Mo</span>
+          <span class="tele-etat">Télécharger la version 2.28 · 148 Mo</span>
         </a>
       </div>
       <p class="petit" style="margin-top:18px">
@@ -317,6 +333,7 @@
         <li>
           <h3>Un appel ? VÉRIFICATION</h3>
           <p>Tape le numéro de la carte, appuie sur Entrée. Le bouton <strong>+</strong> ajoute une autre carte à côté.
+             Carte gagnante : inscris le nom du gagnant dans la fenêtre « Félicitations ».
              Referme la vérification pour reprendre le jeu.</p>
         </li>
         <li>
@@ -354,6 +371,7 @@
             <li>Chaque <strong>changement de forme</strong></li>
             <li>Chaque <strong>carte vérifiée</strong> : son numéro, la forme en cours et le verdict —
                 gagnante, ou les numéros qui manquaient</li>
+            <li>Le <strong>nom de chaque gagnant</strong> inscrit dans la fenêtre « Félicitations »</li>
             <li>Les clics <strong>refusés</strong> pendant une vérification (tableau verrouillé)</li>
             <li>Les pauses téléphone, les pubs diffusées et la fin de la partie</li>
           </ul>
