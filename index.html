@@ -11,7 +11,7 @@
 <meta property="og:title" content="BINGO Habillage TV">
 <meta property="og:description" content="Logiciel gratuit : l'habillage à l'écran de ton bingo télévisé, avec vérification des cartes en direct.">
 <meta property="og:locale" content="fr_CA">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -24,6 +24,8 @@
       <a href="#telecharger">Télécharger</a>
       <a href="#installer">Installer</a>
       <a href="#emploi">Mode d'emploi</a>
+      <a href="#audit">Audit</a>
+      <a href="#bingo-studio" class="lien-studio">Bingo Studio</a>
       <a href="#contribution" class="lien-don">Contribuer</a>
     </nav>
   </div>
@@ -46,6 +48,15 @@
         <a class="bouton bouton-fort" href="#telecharger">Télécharger gratuitement</a>
         <a class="bouton" href="#contribution">Soutenir le projet</a>
       </div>
+
+      <a class="appel-studio" href="https://bingotca.github.io/bingo-studio/" target="_blank" rel="noopener">
+        <span class="appel-studio-texte">
+          <b>Tu veux un logiciel plus professionnel et plus puissant&nbsp;?</b>
+          <span>Bingo Studio communautaire, gratuit lui aussi : ta propre base de 50&nbsp;000 cartes,
+            l'impression de tes cartes, deux écrans (antenne + régie), les gagnants et le partage des lots.</span>
+        </span>
+        <span class="appel-studio-bouton">Clique ici&nbsp;→</span>
+      </a>
 
       <figure class="capture-heros">
         <img src="images/jeu.jpg" width="1600" height="900"
@@ -280,8 +291,82 @@
     </div>
   </section>
 
+  <!-- ============================ Journal d'audit ============================ -->
+  <section id="audit" class="bande bande-sombre">
+    <div class="dedans">
+      <h2>Un journal d'audit pour chaque partie</h2>
+      <p class="intro">
+        Une plainte d'un joueur ? Une question de la <strong>Régie des alcools, des courses et des jeux</strong>
+        sur une partie précise ? Tu as la réponse, <strong>à la seconde près</strong>. Dès que le logiciel
+        s'ouvre, tout ce qui se passe à l'écran est noté automatiquement dans un journal d'audit — sans
+        que tu aies quoi que ce soit à activer.
+      </p>
+
+      <div class="grille-deux">
+        <div class="carte">
+          <h3>Ce qui est noté</h3>
+          <ul class="liste-simple">
+            <li>Chaque <strong>ouverture</strong> du logiciel et chaque <strong>lancement de partie</strong>,
+                avec les formes et les montants des prix en vigueur</li>
+            <li>Chaque <strong>boule sortie</strong>, avec son rang (1<sup>re</sup>, 2<sup>e</sup>, 3<sup>e</sup>…)</li>
+            <li>Chaque <strong>correction</strong> (boule retirée) et chaque <strong>RESET</strong> du tableau</li>
+            <li>Chaque <strong>changement de forme</strong></li>
+            <li>Chaque <strong>carte vérifiée</strong> : son numéro, la forme en cours et le verdict —
+                gagnante, ou les numéros qui manquaient</li>
+            <li>Les clics <strong>refusés</strong> pendant une vérification (tableau verrouillé)</li>
+            <li>Les pauses téléphone, les pubs diffusées et la fin de la partie</li>
+          </ul>
+        </div>
+        <div class="carte">
+          <h3>Pourquoi c'est rassurant</h3>
+          <ul class="liste-simple">
+            <li><strong>Automatique</strong> : impossible d'oublier de l'activer</li>
+            <li><strong>Horodaté</strong> : date et heure (heure, minute, seconde) sur chaque ligne</li>
+            <li><strong>Chaque séance a son identifiant</strong> : on retrouve facilement une soirée de bingo précise</li>
+            <li><strong>Reste sur ton ordinateur</strong> : le journal n'est jamais envoyé sur Internet</li>
+            <li><strong>Rien ne se perd</strong> : effacer le journal en garde une copie de sécurité datée,
+                et les mises à jour du logiciel le conservent</li>
+            <li><strong>Tableau verrouillé</strong> pendant chaque vérification : aucun numéro ne peut
+                être changé pendant qu'on vérifie une carte</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="sous-titre-audit">À quoi ressemble le rapport</h3>
+      <div class="tableau-defile">
+        <table class="tableau-exemple">
+          <thead>
+            <tr><th>Date</th><th>Heure</th><th>Événement</th><th>Détail</th><th>Forme en cours</th><th>Boules sorties</th><th>Carte</th><th>Résultat</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2026-10-04</td><td>19:00:12</td><td>Paramètres enregistrés</td><td>Formes et prix : Le X 100$ · Le H 200$ · Tour de la carte 200$ · Carte pleine 1000$</td><td>Le X</td><td>0</td><td></td><td></td></tr>
+            <tr><td>2026-10-04</td><td>19:00:12</td><td>Lancement de la partie</td><td></td><td>Le X</td><td>0</td><td></td><td></td></tr>
+            <tr><td>2026-10-04</td><td>19:02:41</td><td>Boule sortie</td><td>B 7 (n° 1)</td><td>Le X</td><td>1</td><td></td><td></td></tr>
+            <tr><td>2026-10-04</td><td>19:03:05</td><td>Boule sortie</td><td>G 52 (n° 2)</td><td>Le X</td><td>2</td><td></td><td></td></tr>
+            <tr><td>2026-10-04</td><td>19:03:09</td><td>Boule retirée (correction)</td><td>G 52</td><td>Le X</td><td>1</td><td></td><td></td></tr>
+            <tr><td>2026-10-04</td><td>19:21:48</td><td>Vérification carte</td><td>Carte 27001 — forme « Le X »</td><td>Le X</td><td>12</td><td>27001</td><td class="ok">GAGNANTE</td></tr>
+            <tr><td>2026-10-04</td><td>19:22:10</td><td>Clic bloqué (vérification en cours)</td><td>numéro 33</td><td>Le X</td><td>12</td><td></td><td></td></tr>
+            <tr><td>2026-10-04</td><td>19:23:02</td><td>Vérification carte</td><td>Carte 31415 — forme « Le X »</td><td>Le X</td><td>12</td><td>31415</td><td>NON GAGNANTE (manque : 6, 12, 20, 24, 51, 74, 75)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="petit" style="margin-top:10px">Exemple. Le vrai rapport contient aussi le nom du BINGO et l'identifiant de la séance.</p>
+
+      <h3 class="sous-titre-audit">Le télécharger</h3>
+      <p class="intro">
+        <strong>Paramètres → section ADMIN → « Télécharger le rapport d'audit (CSV) »</strong>. Le fichier
+        s'ouvre directement dans Excel ou Numbers. Bon réflexe : télécharge-le après chaque partie et
+        range-le avec les documents de ton bingo.
+      </p>
+      <p class="petit">
+        Le journal est un outil de traçabilité pour ta télé ; il ne remplace pas les registres que ta
+        licence de bingo peut exiger.
+      </p>
+    </div>
+  </section>
+
   <!-- ============================ Cadre ============================ -->
-  <section class="bande bande-sombre">
+  <section class="bande">
     <div class="dedans">
       <div class="avis">
         <h2>Un mot sur le cadre</h2>
@@ -295,6 +380,62 @@
           auprès de l'autorité de sa province (au Québec : la Régie des alcools, des courses et des jeux).
           Ce logiciel est un outil d'habillage, pas un avis juridique.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ Bingo Studio ============================ -->
+  <section id="bingo-studio" class="bande bande-studio">
+    <div class="dedans">
+      <p class="surtitre">Du même auteur · gratuit aussi</p>
+      <h2>Besoin de plus ? Bingo Studio communautaire</h2>
+      <p class="intro">
+        <strong>Bingo Studio communautaire</strong> est la régie de bingo <em>professionnelle</em> des
+        télévisions communautaires autonomes. Là où BINGO Habillage TV habille ton écran, Bingo Studio
+        prend en charge <strong>toute ton émission</strong> — de l'impression des cartes jusqu'au générique de fin.
+      </p>
+
+      <div class="duo">
+        <figure class="apercu">
+          <img src="images/bingo-studio-antenne.webp" width="1600" height="900" loading="lazy"
+               alt="Bingo Studio, l'écran d'antenne : gagnants, prix à gagner, dernier numéro, trois précédents,
+                    tableau de 1 à 75 et zone d'incrustation de l'animateur.">
+          <figcaption><strong>L'antenne</strong> : gagnants, prix, dernier numéro énorme, tableau complet et incrustation.</figcaption>
+        </figure>
+        <figure class="apercu">
+          <img src="images/bingo-studio-regie.webp" width="1600" height="895" loading="lazy"
+               alt="Bingo Studio, l'écran de régie : tableau cliquable, vérification d'une carte gagnante,
+                    contrôles d'antenne, entracte et parties.">
+          <figcaption><strong>La régie</strong> : un clic par boule, la carte vérifiée, l'entracte et les pubs en un bouton.</figcaption>
+        </figure>
+      </div>
+
+      <ul class="atouts atouts-studio">
+        <li><strong>50 000 cartes à toi</strong><span>Une base libre de droits pour les télévisions communautaires autonomes : elle n'appartient à aucun fournisseur.</span></li>
+        <li><strong>Tes cartes imprimables</strong><span>De 1 à 18 grilles par feuille, tes couleurs, ton numéro de contrôle : le PDF sort prêt pour ton fournisseur.</span></li>
+        <li><strong>Deux écrans</strong><span>L'antenne pour tes téléspectateurs, la régie pour toi. Fonctionne aussi avec OBS et Tricaster.</span></li>
+        <li><strong>Gagnants et lots</strong><span>Les noms restent à l'écran, et le lot se divise tout seul quand deux personnes gagnent la même figure.</span></li>
+        <li><strong>Entracte et commanditaires</strong><span>Un compte à rebours, et les images et vidéos de tes commanditaires passent à l'écran.</span></li>
+        <li><strong>Génériques</strong><span>Début et fin avec ton règlement, tes prix, tes remerciements et ta musique.</span></li>
+      </ul>
+
+      <div class="appel-studio-final">
+        <p><b>Tu veux un logiciel plus professionnel et plus puissant&nbsp;?</b></p>
+        <a class="bouton bouton-fort bouton-geant" href="https://bingotca.github.io/bingo-studio/" target="_blank" rel="noopener">Clique ici pour découvrir Bingo Studio →</a>
+        <p class="petit">Gratuit · Mac et Windows · en français · fonctionne hors ligne · sans abonnement</p>
+      </div>
+
+      <div class="grille-deux" style="margin-top:34px">
+        <div class="carte">
+          <h3>BINGO Habillage TV</h3>
+          <p>Tu as déjà tes cartes papier et tu veux un bel habillage à l'écran, <strong>simple</strong>,
+             sur un seul écran, avec la vérification des cartes en direct.</p>
+        </div>
+        <div class="carte">
+          <h3>Bingo Studio communautaire</h3>
+          <p>Tu veux <strong>la régie complète</strong> : ta propre base de cartes et tes impressions,
+             deux écrans, les gagnants, l'entracte et tes commanditaires.</p>
+        </div>
       </div>
     </div>
   </section>
