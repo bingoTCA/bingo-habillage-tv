@@ -284,3 +284,46 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round
 .tableau-series td:first-child { white-space: nowrap; color: #fff; }
 .carte.achat { margin-top: 10px; border-color: rgba(255,216,74,.4); }
 .carte.achat a[href^="tel:"] { color: var(--jaune); font-weight: 700; text-decoration: none; }
+
+/* ---------- Inscription (formulaire Brevo) et consentement Loi 25 ----------
+   Même principe que Bingo Studio : le formulaire Brevo ne se charge qu'après
+   accord (loi25.js) ; après l'envoi, Brevo mène à telecharger/. */
+.loi25 {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 100;
+  background: rgba(7,17,43,.97);
+  border-top: 1px solid rgba(255,216,74,.35);
+  box-shadow: 0 -10px 40px rgba(0,0,0,.5);
+  padding: 18px 20px;
+}
+.loi25-dedans { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.loi25-texte { flex: 1; min-width: 300px; font-size: 15px; line-height: 24px; color: var(--texte-doux); }
+.loi25-texte strong { color: var(--jaune); }
+.loi25-boutons { display: flex; gap: 10px; flex-shrink: 0; }
+@media (max-width: 620px) { .loi25-boutons { width: 100%; } .loi25-boutons .bouton { flex: 1; text-align: center; } }
+
+.cadre-inscription {
+  background: #fff; border-radius: 14px; overflow: hidden; max-width: 720px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+}
+.cadre-inscription iframe { display: block; width: 100%; height: 760px; border: 0; }
+@media (max-width: 620px) { .cadre-inscription iframe { height: 820px; } }
+.cadre-inscription.cadre-en-attente {
+  background: rgba(255,255,255,.04); border: 1px dashed rgba(255,216,74,.35); box-shadow: none;
+}
+.cadre-invite { padding: 34px 30px; max-width: 640px; }
+.cadre-invite p { color: var(--texte-doux); margin-bottom: 14px; line-height: 25px; }
+.cadre-invite strong { color: var(--texte); }
+.cadre-invite .bouton { margin: 6px 0 14px; }
+.cadre-invite .petit { margin-bottom: 0; }
+
+.entete nav .lien-contact { color: var(--jaune); font-weight: 700; }
+.contact-bloc {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  border: 1px solid rgba(255,216,74,.3); background: rgba(255,216,74,.06);
+  border-radius: 14px; padding: 22px 26px; margin: 28px 0 8px; max-width: 78ch;
+}
+.contact-bloc strong { display: block; color: var(--jaune); margin-bottom: 6px; }
+.contact-bloc p { margin: 0; color: var(--texte-doux); font-size: 15px; max-width: 46ch; }
+.contact-bloc .bouton { flex-shrink: 0; }
+.pied-contact { font-size: 17px; margin-bottom: 6px; }
+.pied-contact strong { color: var(--jaune); }
