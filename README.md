@@ -35,8 +35,8 @@ poids affichés dans `index.html` (tuiles « Mac » et « PC »).
 
 ⚠️ Ne jamais déposer le `.dmg` ni le `.exe` dans le dépôt lui-même : il va dans les Releases.
 
-## Version d'essai
+## Visibilité
 
-La page porte `<meta name="robots" content="noindex">` : elle n'apparaît pas dans les
-moteurs de recherche tant que la base de cartes n'est pas complète. Retirer la ligne le
-jour du lancement officiel.
+Depuis le 30 septembre 2026 (base de cartes complète), la page d'accueil est **visible** dans les
+moteurs de recherche. `telecharger/` (page d'après inscription) et `confidentialite/` gardent
+`<meta name="robots" content="noindex">`.
