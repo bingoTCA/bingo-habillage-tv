@@ -48,7 +48,7 @@
         À l'écran, par contre, <strong>ton bingo a l'air d'une vraie émission</strong> —
         et une carte gagnante se <strong>vérifie en quelques secondes, en direct</strong>.
       </p>
-      <span class="pastille">Version d'essai 2.34 · Mac et PC (Windows)</span>
+      <span class="pastille">Version d'essai 2.35 · Mac et PC (Windows)</span>
       <span class="pastille pastille-arrow">Compatible avec les cartes de bingo papier Arrow Games</span>
       <div class="boutons">
         <a class="bouton bouton-fort" href="#telecharger">Télécharger gratuitement</a>
@@ -110,7 +110,12 @@
         <li>
           <svg viewBox="0 0 32 32"><path d="M8 3h12l6 6v20H8z"/><path d="M20 3v6h6M12 15h10M12 20h10M12 25h6"/></svg>
           <strong>Journal d'audit</strong>
-          <span>Chaque boule, chaque correction, chaque carte vérifiée et chaque gagnante est notée à la seconde près. Un rapport téléchargeable (tableur) pour chaque partie.</span>
+          <span>Chaque boule, chaque correction, chaque carte vérifiée et chaque gagnante est notée à la seconde près. Chaque partie est archivée 12 mois dans le logiciel, et copiée si tu veux dans ton Google Drive ou ton Dropbox.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 32 32"><rect x="3" y="7" width="26" height="18" rx="2"/><path d="M13 12l7 4-7 4z"/></svg>
+          <strong>Tes génériques</strong>
+          <span>Une vidéo de début et une de fin pour chaque BINGO. Le générique de début attend sur sa première image, puis fondu vers le jeu ; le bouton FIN, actif à la dernière forme, lance celui de fin.</span>
         </li>
         <li>
           <svg viewBox="0 0 32 32"><rect x="3" y="7" width="12" height="9" rx="1.5"/><rect x="17" y="7" width="12" height="9" rx="1.5"/><rect x="3" y="18" width="12" height="9" rx="1.5"/><path d="M23 19v7M19.5 22.5h7"/></svg>
@@ -250,12 +255,12 @@
         <a class="telechargement" href="https://github.com/bingoTCA/bingo-habillage-tv/releases/latest/download/BINGO-Habillage-TV-mac.dmg">
           <span class="tele-titre">Mac</span>
           <span class="tele-detail">Mac avec puce Apple (M1, M2, M3, M4) · macOS 13 Ventura ou plus récent</span>
-          <span class="tele-etat">Télécharger la version 2.34 · 164 Mo</span>
+          <span class="tele-etat">Télécharger la version 2.35 · 164 Mo</span>
         </a>
         <a class="telechargement" href="https://github.com/bingoTCA/bingo-habillage-tv/releases/latest/download/BINGO-Habillage-TV-windows.exe">
           <span class="tele-titre">PC (Windows)</span>
           <span class="tele-detail">Windows 10 ou 11 (64 bits) · nouveau : dis-moi comment ça se passe sur ton PC</span>
-          <span class="tele-etat">Télécharger la version 2.34 · 148 Mo</span>
+          <span class="tele-etat">Télécharger la version 2.35 · 148 Mo</span>
         </a>
       </div>
       <p class="petit" style="margin-top:18px">
@@ -332,8 +337,9 @@
         </li>
         <li>
           <h3>Lance la partie</h3>
-          <p><strong>LANCER LE BINGO ▶</strong> : l'écran passe en plein écran. Envoie-le vers ta régie,
-             incruste ton animateur sur la zone bleue.</p>
+          <p><strong>LANCER LE BINGO ▶</strong> : l'écran passe en plein écran. Ton générique de début attend sur sa
+             première image : ▶ le démarre, puis fondu vers le jeu. Envoie l'écran vers ta régie et incruste ton
+             animateur sur la zone bleue.</p>
         </li>
         <li>
           <h3>Clique chaque numéro qui sort du boulier</h3>
@@ -347,7 +353,7 @@
         </li>
         <li>
           <h3>FIN</h3>
-          <p>Le bouton <strong>FIN</strong> affiche ton générique de fin. Le rapport d'audit de la partie se télécharge dans les paramètres (section ADMIN).</p>
+          <p>Le bouton <strong>FIN</strong>, actif pendant la dernière forme, lance ton générique de fin. Le rapport de la partie est archivé tout seul (Paramètres › ADMIN).</p>
         </li>
       </ol>
       <p class="petit" style="margin-top:26px">
@@ -391,7 +397,7 @@
             <li><strong>Automatique</strong> : impossible d'oublier de l'activer</li>
             <li><strong>Horodaté</strong> : date et heure (heure, minute, seconde) sur chaque ligne</li>
             <li><strong>Chaque séance a son identifiant</strong> : on retrouve facilement une soirée de bingo précise</li>
-            <li><strong>Reste sur ton ordinateur</strong> : le journal n'est jamais envoyé sur Internet</li>
+            <li><strong>Reste sur ton ordinateur</strong> : le logiciel n'envoie jamais le journal sur Internet — seulement dans le dossier partagé que tu choisis, si tu en choisis un</li>
             <li><strong>Rien ne se perd</strong> : effacer le journal en garde une copie de sécurité datée,
                 et les mises à jour du logiciel le conservent</li>
             <li><strong>Tableau verrouillé</strong> pendant chaque vérification : aucun numéro ne peut
@@ -420,11 +426,16 @@
       </div>
       <p class="petit" style="margin-top:10px">Exemple. Le vrai rapport contient aussi le nom du BINGO et l'identifiant de la séance.</p>
 
-      <h3 class="sous-titre-audit">Le télécharger</h3>
+      <h3 class="sous-titre-audit">Le retrouver</h3>
       <p class="intro">
-        <strong>Paramètres → section ADMIN → « Télécharger le rapport d'audit (CSV) »</strong>. Le fichier
-        s'ouvre directement dans Excel ou Numbers. Bon réflexe : télécharge-le après chaque partie et
-        range-le avec les documents de ton bingo.
+        <strong>Chaque partie est archivée toute seule</strong> dans le logiciel et gardée <strong>12 mois</strong> :
+        Paramètres → section ADMIN → « Archives des parties ». Un bouton par partie télécharge son rapport, qui
+        s'ouvre directement dans Excel ou Numbers.
+      </p>
+      <p class="intro">
+        <strong>Ton responsable veut les recevoir ?</strong> Choisis un <strong>dossier partagé</strong> (Google Drive,
+        Dropbox, OneDrive ou iCloud) dans les paramètres : chaque rapport y est copié automatiquement. Pas de
+        courriel à configurer, pas de mot de passe à donner au logiciel.
       </p>
       <p class="petit">
         Le journal est un outil de traçabilité pour ta télé ; il ne remplace pas les registres que ta
